@@ -1,9 +1,50 @@
 {% extends "base.html" %}
+{%load static%}
 
 {% block title %}
 Blogify
 {% endblock %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{%static "blog/index.css"%}" />
+{% endblock %}
+
 {% block content %}
-<h1> Welcome to my blog </h1>
+
+<header id="main-navigation"> 
+    <h1><a href="">BlogiFy</h1>
+    <nav>
+        <a href="">All Posts </a>
+    </nav>
+</header>
+
+<section id="welcome">
+    <header>
+        <img src="" alt="Ishaan, the Author" />
+        <h2>Ishaan's Blog</h2>
+    </header>
+    <p>Hi,I am Ishaan, and this blog is a collection of my thoughts and adventures.</p>
+</section>
+<section id="latest-posts">
+    <h2>My Latest Posts</h2>
+
+    <ul>
+        <li>
+            <article class="post">
+                <a href="">
+                    <img src="" alt="mountain hiking" />
+                    <div class="post__content">
+                        <h3>Mountain Hiking </h3>
+                        <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened while enjoying the view!</p>
+                    </div>
+                </a>
+            </article>
+        </li>
+    </ul>
+</section>
+<section id="about">
+    <h2> What I do </h2>
+    <p>I love programming and I enjoy exploring new technologies!</p>
+    <p>My Goal is to keep growing as a developer, and I would also love to work in Formula 1 one day!</p>
+</section>
 {% endblock %}
